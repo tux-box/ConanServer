@@ -5,21 +5,10 @@ FROM ubuntu:22.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Install dependencies
-RUN apt-get update && apt-get install -y \
-    wget \
-    curl \
-    unzip \
-    lib32gcc-s1 \
-    lib32stdc++6 \
-    software-properties-common \
-    && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y wget curl unzip lib32gcc-s1 lib32stdc++6 software-properties-common && rm -rf /var/lib/apt/lists/*
 
 # Install SteamCMD
-RUN mkdir -p /opt/steamcmd && \
-    cd /opt/steamcmd && \
-    wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz && \
-    tar -xvzf steamcmd_linux.tar.gz && \
-    rm steamcmd_linux.tar.gz
+RUN mkdir -p /opt/steamcmd && cd /opt/steamcmd && wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz && tar -xvzf steamcmd_linux.tar.gz && rm steamcmd_linux.tar.gz
 
 # Set working directory
 WORKDIR /conanexiles
