@@ -20,7 +20,8 @@ WORKDIR /conanexiles
 EXPOSE 7777/udp 7778/udp 27015/udp
 
 # Copy server start script
-COPY start_server.sh /start_server.sh
+COPY scripts/start_server.sh ./start_server.sh
+RUN ls -la ./
 RUN chmod +x /start_server.sh
 
 # Start the server
