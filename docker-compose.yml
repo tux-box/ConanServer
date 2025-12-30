@@ -9,7 +9,7 @@ services:
       - "7778:7778/udp"
       - "27015:27015/udp"
     volumes:
-      - C:\D_CS:/conanexiles
+      - C:\D\C:/conanexiles
     environment:
       - MAXPLAYERS=40
       - SESSIONNAME=My Docker Conan Exiles Server

@@ -2,7 +2,7 @@
 # Conan Exiles Dedicated Server Start Script
 
 # Make sure SteamCMD is updated
-/opt/steamcmd/steamcmd.sh +quit
+steamcmd.sh +quit
 
 # Install/update server with SteamCMD
 /opt/steamcmd/steamcmd.sh +force_install_dir /conanexiles +login anonymous +app_update 443030 validate +quit
